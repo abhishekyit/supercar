@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+
+  <nav>
+    <div class="logo">SUPER CAR</div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search..." />
+      <button>🔍</button>
+    </div>
+
+    <div class="auth-buttons">
+      <button>Login</button>
+      <button>Register</button>
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      document.querySelector('.search-box').classList.toggle('active');
+      document.querySelector('.auth-buttons').classList.toggle('active');
+    }
+  </script>
+  <section class="car-hero">
+  <div class="overlay">
+    <div class="hero-content">
+      <h1>Experience the Future of Driving</h1>
+      <h3>Luxury, Power & Innovation Combined</h3>
+      <p>
+        Discover our latest lineup of high-performance cars engineered for speed, comfort,
+        and advanced technology. Your next adventure begins here.
+      </p>
+      <button>Explore Cars</button>
+    </div>
+  </div>
+</section>
+
+
+<section class="car-section">
+  <h2>Our Featured Cars</h2>
+  <div class="car-container">
+    <div class="car-card">
+      <img src="img/download.jpg" alt="Car 1">
+      <h3>BMW M3</h3>
+      <p>Sporty design with 480 HP and luxurious interiors.</p>
+      <button>View Details</button>
+    </div>
+
+    <div class="car-card">
+      <img src="img/download (1).jpg" alt="Car 2">
+      <h3>Audi R8</h3>
+      <p>V10 performance with advanced aerodynamics.</p>
+      <button>View Details</button>
+    </div>
+
+    <div class="car-card">
+      <img src="img/download (2).jpg" alt="Car 3">
+      <h3>Mercedes AMG GT</h3>
+      <p>Powerful twin-turbo engine and elegant design.</p>
+      <button>View Details</button>
+    </div>
+
+    <div class="car-card">
+      <img src="img/download (3).jpg" alt="Car 4">
+      <h3>Tesla Model S</h3>
+      <p>Electric performance with cutting-edge technology.</p>
+      <button>View Details</button>
+    </div>
+  </div>
+</section>
+<section class="car-video-section">
+  <h2>Our Latest Car Videos</h2>
+  <div class="car-video-container">
+    
+    <div class="car-video-card">
+      <video controls muted poster="https://via.placeholder.com/400x250?text=Car+1">
+        <source src="videos/1.webm" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>BMW M4 Competition</h3>
+      <p>Pure performance meets luxury design — the ultimate driving experience.</p>
+      <button>View Details</button>
+    </div>
+
+    <div class="car-video-card">
+      <video controls muted poster="https://via.placeholder.com/400x250?text=Car+2">
+        <source src="videos/2.webm" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>Audi RS7</h3>
+      <p>Elegant power with a twin-turbo V8 and aggressive styling.</p>
+      <button>View Details</button>
+    </div>
+
+    <div class="car-video-card">
+      <video controls muted poster="https://via.placeholder.com/400x250?text=Car+3">
+        <source src="videos/3.webm" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>Mercedes AMG GT</h3>
+      <p>High-speed precision engineering and cutting-edge aerodynamics.</p>
+      <button>View Details</button>
+    </div>
+
+    <div class="car-video-card">
+      <video controls muted poster="videos/4.webm">
+        <source src="videos/4.webm" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>Tesla Model 3</h3>
+      <p>All-electric innovation for the modern era — smooth, silent, powerful.</p>
+      <button>View Details</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="showrooms-section">
+  <div class="showrooms-content">
+    <h2>Our Showrooms</h2>
+    <p>
+      Our mission is to redefine the automotive landscape by setting new standards of innovation and impact.
+      Feel free to visit our showrooms and explore our fascinating collection of supercars,
+      and stay tuned as we gear up to expand even more!
+    </p>
+  </div>
+
+  <div class="showroom-grid">
+
+    <div class="showroom-card">
+      <div class="showroom-info">
+        <h3>DEL</h3>
+        <h4>Gurgaon, Sector 37</h4>
+      </div>
+      <div class="arrow">➜</div>
+    </div>
+
+    <div class="showroom-card">
+      <div class="showroom-info">
+        <h3>BOM</h3>
+        <h4>Mumbai, Andheri East</h4>
+      </div>
+      <div class="arrow">➜</div>
+    </div>
+
+    <div class="showroom-card">
+      <div class="showroom-info">
+        <h3>HYD</h3>
+        <h4>Hyderabad, Banjara Hills</h4>
+      </div>
+      <div class="arrow">➜</div>
+    </div>
+
+    <div class="showroom-card">
+      <div class="showroom-info">
+        <h3>AMD</h3>
+        <h4>Gujarat, Ahmedabad</h4>
+      </div>
+      <div class="arrow">➜</div>
+    </div>
+
+    <div class="showroom-card">
+      <div class="showroom-info">
+        <h3>BLR</h3>
+        <h4>Bengaluru, Residency Road</h4>
+      </div>
+      <div class="arrow">➜</div>
+    </div>
+  </div>
+
+  <div class="sell-section">
+    <h3>Planning To Sell?</h3>
+    <button>Contact Us</button>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Footer Column 1 -->
+    <div class="footer-about">
+      <h2>MyBrand</h2>
+      <p>
+        Redefining the automotive experience with innovation, performance, and style.
+        Discover the supercar of your dreams today.
+      </p>
+    </div>
+
+    <!-- Footer Column 2 -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Cars</a></li>
+        <li><a href="#">Showrooms</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Footer Column 3 -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>📍 Sector 37, Gurgaon, India</p>
+      <p>📞 +91 98765 43210</p>
+      <p>✉️ info@mybrandcars.com</p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 MyBrand Cars. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- FontAwesome Icons (add before closing </body>) -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/9828095400" 
+   class="whatsapp-float" 
+   target="_blank" 
+   title="Chat on WhatsApp">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- FontAwesome for Icon (add once if not already used) -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

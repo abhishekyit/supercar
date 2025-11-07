@@ -1,0 +1,576 @@
+
+    /* === Basic Reset === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    /* === Navbar Container === */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    /* === Logo === */
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    /* === Nav Links === */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00bcd4;
+    }
+
+    /* === Search Box === */
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .search-box input {
+      border: none;
+      padding: 8px;
+      outline: none;
+    }
+
+    .search-box button {
+      background: #00bcd4;
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    /* === Auth Buttons === */
+    .auth-buttons button {
+      background: #00bcd4;
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      margin-left: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .auth-buttons button:hover {
+      background: #0097a7;
+    }
+
+    /* === Hamburger Icon === */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* === Responsive Styles === */
+    @media (max-width: 768px) {
+      .nav-links,
+      .search-box,
+      .auth-buttons {
+        display: none;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      .nav-links.active,
+      .search-box.active,
+      .auth-buttons.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  
+  .car-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+
+  .car-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .car-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .car-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+
+  .car-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .car-card h3 {
+    margin: 15px 0 10px;
+    color: #222;
+  }
+
+  .car-card p {
+    color: #555;
+    padding: 0 15px 15px;
+    font-size: 0.95em;
+  }
+
+  .car-card button {
+    background-color: #00bcd4;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .car-card button:hover {
+    background-color: #0097a7;
+  }
+  
+
+
+  .car-hero {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80') 
+      no-repeat center center/cover;
+    height: 90vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Overlay for dark effect */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 700px;
+    padding: 20px;
+    z-index: 1;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+  }
+
+  .hero-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #00bcd4;
+  }
+
+  .hero-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .hero-content button {
+    background-color: #00bcd4;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .hero-content button:hover {
+    background-color: #0097a7;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2em;
+    }
+
+    .hero-content h3 {
+      font-size: 1.2em;
+    }
+
+    .hero-content p {
+      font-size: 1em;
+    }
+  }
+
+
+  .car-video-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+  }
+
+  .car-video-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .car-video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .car-video-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .car-video-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+
+  .car-video-card video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .car-video-card h3 {
+    margin: 15px 0 10px;
+    color: #222;
+  }
+
+  .car-video-card p {
+    color: #555;
+    font-size: 0.95em;
+    padding: 0 15px 15px;
+  }
+
+  .car-video-card button {
+    background-color: #00bcd4;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .car-video-card button:hover {
+    background-color: #0097a7;
+  }
+
+  @media (max-width: 768px) {
+    .car-video-card video {
+      height: 180px;
+    }
+  }
+
+  .showrooms-section {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+  }
+
+  .showrooms-content {
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+
+  .showrooms-content h2 {
+    font-size: 2.2em;
+    color: #222;
+    margin-bottom: 15px;
+  }
+
+  .showrooms-content p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .showroom-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .showroom-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 25px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .showroom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+
+  .showroom-info h3 {
+    font-size: 1.6em;
+    color: #00bcd4;
+    margin-bottom: 5px;
+  }
+
+  .showroom-info h4 {
+    color: #333;
+    font-weight: normal;
+    font-size: 1em;
+  }
+
+  .arrow {
+    font-size: 1.8em;
+    color: #00bcd4;
+    transition: transform 0.3s;
+  }
+
+  .showroom-card:hover .arrow {
+    transform: translateX(5px);
+  }
+
+  .sell-section {
+    margin-top: 50px;
+  }
+
+  .sell-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #222;
+  }
+
+  .sell-section button {
+    background-color: #00bcd4;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+  }
+
+  .sell-section button:hover {
+    background-color: #0097a7;
+  }
+
+  @media (max-width: 768px) {
+    .showrooms-content h2 {
+      font-size: 1.8em;
+    }
+
+    .showroom-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .arrow {
+      margin-top: 10px;
+    }
+  }
+
+
+
+  .site-footer {
+    background-color: #111;
+    color: #ddd;
+    padding: 60px 20px 20px;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-about h2 {
+    color: #00bcd4;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+  }
+
+  .footer-about p {
+    line-height: 1.6;
+    font-size: 0.95em;
+  }
+
+  .footer-links h3,
+  .footer-contact h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+
+  .footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover {
+    color: #00bcd4;
+  }
+
+  .footer-contact p {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #bbb;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #00bcd4;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    padding-top: 15px;
+    font-size: 0.9em;
+    color: #888;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      text-align: center;
+    }
+  }
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    font-size: 28px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .whatsapp-float i {
+    line-height: 55px;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  }
+
+
+
+
